@@ -1,0 +1,70 @@
+.top{
+  margin-top: 20px;
+}
+
+.bot{
+  margin-bottom: 15px;
+}
+
+.shadow{
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.imagen{
+  margin-top: 20px;
+}
+
+.texto h5{
+  color: #ed1b2e;
+  font-size: 16px;
+}
+
+.texto .parrafo{
+  color: #6E6E6E;
+  font-size: 14px;
+}
+
+.boton{
+  background: #7d3f98;
+  color: #fff;
+}
+.destacados{
+  margin-bottom: 20px;
+}
+.destacados .tarjeto{
+  border: 1px solid #D8D8D8;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.destacados .tarjeto .item .titulo{
+  color: #7d3f98;
+}
+.informacion{
+  margin-bottom: 20px;
+}
+.informacion .info{
+  margin-top: 10px;
+}
+.informacion .info h5{
+  color: #ed1b2e;
+}
+
+.informacion .info .valor span{
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.informacion .info .valor .precio{
+  text-decoration: line-through;
+}
+
+.informacion .info .valor .oferta{
+  color: #ed1b2e;
+}
+
+.informacion .info .parrafo{
+  color: #6E6E6E;
+}
