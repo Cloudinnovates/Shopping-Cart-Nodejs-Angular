@@ -1,50 +1,55 @@
-.top{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.boton{
-  background: #7d3f98;
-  color: #fff;
-}
-.boton2{
-  background: #146eb4;
-  color: #fff;
-  font-size: 15px;
-}
-.top-2{
-  margin-top: 60px;
-  margin-bottom: 20px;
+.top {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.menu{
-  background: #2E2E2E;
-  width: 100%;
+.boton {
+    background: #7d3f98;
+    color: #fff;
 }
 
-.active{
-  background: #7d3f98;
+.boton2 {
+    background: #146eb4;
+    color: #fff;
+    font-size: 15px;
 }
 
-.menu a{
-  display: inline-block;
-  text-decoration: none;
-  padding: 20px 25px;
-  color: #fff;
-  font-weight: 450;
+.top-2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
+.menu {
+    background: #2E2E2E;
+    width: 100%;
+}
 
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 25px;
+    color: #fff;
+    font-weight: 450;
+}
+
+.menu-tabs {
+    background: #F2F2F2;
+    padding: 20px 40px;
+    margin-top: 5px;
+}
+
+.active {
+    background: #7d3f98;
+}
 
 @media only screen and (max-width: 767px) {
     .top-2 {
         margin-top: 0;
     }
-
-    .menu a{
-      display: block;
-      text-align: center;
-      border: 1px solid #fff;
-      padding: 10px;
+    .menu a {
+        display: block;
+        text-align: center;
+        border: 1px solid #fff;
+        padding: 10px;
     }
-
 }

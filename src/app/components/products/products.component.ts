@@ -1,3 +1,5 @@
+import { Category } from './../../models/categoria.model';
+import { CategoriasService } from './../../services/categorias/categorias.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
-  constructor() { }
+  categories: Category[] = [];
+  titulo = 'Categorías';
+  tipo = 'categories';
+  constructor(public _categoriaService: CategoriasService) { }
 
   ngOnInit() {
+    this.cargarMenu();
+  }
+
+  cargarMenu() {
+    this._categoriaService.categorias()
+      .subscribe(data => {
+        this.categories = data;
+      });
   }
 
 }

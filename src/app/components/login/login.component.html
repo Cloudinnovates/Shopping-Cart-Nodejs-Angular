@@ -1,3 +1,92 @@
-<p>
-  login works!
-</p>
+<section class="top">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="tarjeta">
+                <div class="titulo">
+                    <h4>CLIENTES</h4>
+                    <p><small>Ingresa con tu cuenta en el siguiente formulario.</small></p>
+                </div>
+                <form ngNativeValidate #f="ngForm" (ngSubmit)="login(f)">
+                    <div class="form-group">
+                        <input type="email" required ngModel name="email" placeholder="Correo Electrónico" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required ngModel name="password" placeholder="************" class="form-control">
+                    </div>
+
+                    <p><a href="">¿Perdiste tu contraseña?</a></p>
+                    <button type="submit" class="btn button">Ingresar</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="tarjeta">
+                <div class="titulo">
+                    <h4>REGISTRAR UNA NUEVA CUENTA</h4>
+                </div>
+                <div *ngIf="mostrarAlerta" class="alert" [ngClass]="{'alert-success': tipoAlerta, 'alert-danger': !tipoAlerta}">
+                    {{ alertaMensaje }}
+                </div>
+                <form ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarCustomer()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" formControlName="name" name="name" class="form-control" placeholder="Nombres">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" formControlName="lastname" name="lastname" class="form-control" placeholder="Apellidos">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input formControlName="dni" name="dni" type="text" class="form-control" placeholder="Dni">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select formControlName="country_id" name="country_id" class="form-control">
+                                  <option value="">Seleccionar País</option>
+                                  <option *ngFor="let pais of paises"  [value]="pais._id">{{ pais.name }}</option>
+                                  
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" formControlName="email" name="email" placeholder="Correo Electrónico" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" formControlName="city" name="city" class="form-control" placeholder="Ciudad">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" formControlName="password" name="password" placeholder="************" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" formControlName="telefono" name="telefono" placeholder="+51324354545" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><small>Al crear cuenta acepta nuestros términos y condiciones.</small></p>
+                    <button type="submit" class="btn button">Crear Cuenta</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

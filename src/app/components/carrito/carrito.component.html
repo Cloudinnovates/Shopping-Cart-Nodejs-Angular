@@ -1,0 +1,39 @@
+<div class="top">
+    <div class="row" *ngIf="carritoService.carrito.length === 0">
+        <div class="col-md-12 text-center">
+            <img src="assets/imgs/carrito_vacio.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row" *ngIf="carritoService.carrito.length !== 0">
+        <div class="col-md-12">
+            <div class="table-responsive">
+
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Portada</th>
+                            <th>Precio</th>
+                            <th>Descuento</th>
+                            <th>Precio Final</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of carritoService.carrito">
+                            <td>{{ item.name }}</td>
+                            <td><img [src]="item.imagen_portada | imagen" class="img-fluid" alt=""></td>
+                            <td>S/{{ item.price | number:'3.2'}}</td>
+                            <td>{{ item.discount }}%</td>
+                            <td>S/{{ item.final_price | number:'3.2'}}</td>
+                            <td class="text-center"><button (click)="carritoService.quitarProducto(item)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" (click)="carrito()" class="btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Realizar Compra</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>

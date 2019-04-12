@@ -1,0 +1,30 @@
+<div class="top">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Fecha de Pedido</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of orders">
+                            <td>{{ item.created_at | amDateFormat:'LL'}}</td>
+
+                            <td>S/{{ item.total | number:'3.2'}}</td>
+                            <td class="text-center">
+                                <span class="badge " [ngClass]="{'badge-warning': item.estado=='espera', 'badge-info': item.estado=='visto', 'badge-success': item.estado=='enviado', 'badge-danger': item.estado=='cancelado'}">
+                                    {{ item.estado }}
+                                  </span></td>
+                            <td class="text-center"><button class="btn btn-info btn-sm"><i class="fa fa-shopping-cart"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

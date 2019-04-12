@@ -1,0 +1,83 @@
+.top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bot {
+    margin-bottom: 20px;
+}
+
+.producto {
+    padding: 20px;
+}
+
+.producto .titulo {
+    color: #ed1b2e;
+}
+
+.producto .texto .parrafo {
+    color: #6E6E6E;
+    line-height: 30px;
+}
+
+.producto .texto .costo .oferta {
+    color: #ed1b2e;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.producto .texto .costo .precio {
+    color: #6E6E6E;
+    font-size: 24px;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.button {
+    background: #2E2E2E;
+    margin-bottom: 10px;
+    color: #fff;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 450;
+}
+
+.bot .details {
+    background: #7d3f98;
+    color: #F2F2F2;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.bot .descripcion {
+    color: #6E6E6E;
+    padding: 20px 0;
+}
+
+.bot .descripcion .p {
+    text-align: justify;
+}
+
+.titulo-categorias .t {
+    color: #848484;
+}
+
+.categorias a {
+    display: block;
+    color: #848484;
+    text-decoration: none;
+    padding: 8px;
+    border-bottom: 1px dotted #848484;
+}
+
+.opciones {
+    margin-bottom: 10px;
+}
+
+.stars {
+    margin-bottom: 10px;
+}
+
+.stars .ok {
+    color: #ecb731;
+}

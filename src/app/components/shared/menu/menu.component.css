@@ -1,0 +1,104 @@
+.top {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.item {
+    list-style: none;
+}
+
+.item a {
+    display: block;
+    color: #848484;
+    text-decoration: none;
+    padding: 8px;
+    border-bottom: 1px dotted #848484;
+}
+
+.destacados {
+    margin-bottom: 20px;
+}
+
+.destacados .tarjeto {
+    border: 1px solid #D8D8D8;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.destacados .tarjeto .pagina {
+    color: #000;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.destacados .tarjeto .pagina:hover {
+    text-decoration: underline;
+}
+
+.destacados .tarjeto .activo {
+    text-decoration: underline;
+}
+
+.destacados .tarjeto .item .titulo {
+    color: #7d3f98;
+}
+
+.arriba {
+    margin-top: 40px;
+}
+
+.informacion {
+    margin-bottom: 20px;
+}
+
+.informacion .info {
+    margin-top: 10px;
+}
+
+.informacion .info h5 {
+    color: #ed1b2e;
+}
+
+.informacion .info .valor span {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.informacion .info .valor .precio {
+    text-decoration: line-through;
+}
+
+.informacion .info .valor .oferta {
+    color: #ed1b2e;
+}
+
+.informacion .info .parrafo {
+    color: #6E6E6E;
+}
+
+.informacion .info .button {
+    padding: 4px;
+    cursor: pointer;
+    color: #424242;
+}
+
+.informacion .info .details {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.informacion .info .button:hover {
+    color: #7d3f98;
+}
+
+.informacion .info .icono {
+    padding: 8px;
+    border: 1px solid #424242;
+    background: #424242;
+    color: #fff;
+    font-size: 18px;
+}

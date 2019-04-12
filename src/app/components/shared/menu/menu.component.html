@@ -1,0 +1,74 @@
+<div class="top">
+    <div class="row destacados">
+        <div class="col-md-12">
+            <div class="tarjeto">
+                <div class="row">
+                    <div class="col-md-3 item">
+                        <h4 class="titulo">{{ titulo }}</h4>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label for="sort">Ordenar: </label>
+                                <select name="sort" id="sort">
+                <option value="low">Precios Bajos</option>
+                <option value="high">Precios Altos</option>
+              </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="mostar">Mostrar: </label>
+                                <select name="show" id="show">
+                <option value="4">4</option>
+                <option value="8">8<option>
+              </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Resultados:
+                            <a href="" class="pagina">
+                                <<<</a>
+                                    <a href="" class="pagina">>>></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row animated fadeIn">
+        <div class="col-md-3 menu">
+            <ul class="items">
+                <li class="item" *ngFor="let item of menu">
+                    <a class="cursor" (click)="traerProductos(item._id)">> {{ item.name }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="arriba text-center" *ngIf="!menu">
+                <img src="assets/imgs/cargar.gif" class="img-fluid" alt="">
+            </div>
+            <div class="row informacion">
+                <div class="col-md-4 bot animated fadeIn" *ngFor="let producto of productos">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <img [src]="producto.imagen_portada | imagen" class="img-fluid" alt="">
+                            <div class="info">
+                                <h5>{{ producto.name }}</h5>
+                                <p class="parrafo">{{ producto.frase }}</p>
+                                <p class="valor">
+                                    <span class="oferta">S/{{ producto.price - (producto.price * producto.discount)/100 | number:'3.2'}}</span>
+                                    <span class="precio"> S/{{ producto.price | number:'3.2'}}</span>
+                                </p>
+                                <p><i class="fa fa-shopping-cart icono" aria-hidden="true"></i><button type="button" class="button">Agregar al Carrito</button></p>
+                                <button [routerLink]="['/product', producto.slug]" type="button" class="button details">Detalles</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

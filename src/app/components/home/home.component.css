@@ -39,6 +39,20 @@
   border-radius: 5px;
 }
 
+.destacados .tarjeto .pagina{
+  color: #000;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.destacados .tarjeto .pagina:hover{
+  text-decoration: underline;
+}
+
+.destacados .tarjeto .activo{
+  text-decoration: underline;
+}
+
 .destacados .tarjeto .item .titulo{
   color: #7d3f98;
 }
@@ -67,4 +81,28 @@
 
 .informacion .info .parrafo{
   color: #6E6E6E;
+}
+
+.informacion .info .button{
+  padding: 4px;
+  cursor: pointer;
+  color: #424242;
+}
+
+.informacion .info .details{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.informacion .info .button:hover{
+  color: #7d3f98;
+}
+
+.informacion .info .icono{
+  padding: 8px;
+  border: 1px solid #424242;
+  background: #424242;
+  color: #fff;
+  font-size: 18px;
 }

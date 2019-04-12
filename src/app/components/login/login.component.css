@@ -1,0 +1,26 @@
+.top{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.tarjeta{
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.titulo{
+  color: #848484;
+  margin: 10px 0;
+}
+
+.button{
+  background: #2E2E2E;
+  margin-bottom: 10px;
+  color: #fff;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 450;
+}

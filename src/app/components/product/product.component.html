@@ -1,0 +1,51 @@
+<div class="row top">
+    <div class="col-md-4 text-center">
+        <img [src]="producto.imagen_portada | imagen" width="240" class="img-fluid" alt="">
+    </div>
+    <div class="col-md-4 producto">
+        <div class="titulo">
+            <h4>{{ producto.name | uppercase}}</h4>
+        </div>
+        <div class="texto">
+            <p class="parrafo">{{ producto.mini_descripcion }}
+            </p>
+            <p class="costo">
+                <label for="">Precio: </label>
+                <span class="oferta">S/{{ producto.final_price | number:'3.2'}}</span>
+                <span class="precio"> S/{{ producto.price | number:'3.2'}}</span></p>
+            <hr>
+        </div>
+
+        <div class="stars">
+            <h5 class="titulo-opciones">Calificación:
+                <i class="fa fa-star ok"></i>
+                <i class="fa fa-star ok"></i>
+                <i class="fa fa-star ok"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </h5>
+        </div>
+        <button type="button" class="btn button">Agregar al Carrito</button>
+    </div>
+    <div class="col-md-4">
+        <div class="titulo-categorias">
+            <h3 class="t">CATEGORIAS</h3>
+        </div>
+        <div class="categorias">
+            <a href="" *ngFor="let categoria of categorias">> {{ categoria.name }}</a>
+
+        </div>
+    </div>
+</div>
+<div class="row bot">
+    <div class="col-md-8">
+        <div class="details">
+            <h5>DETALLES DEL PRODUCTO</h5>
+        </div>
+        <div class="descripcion">
+            <p class="p">{{ producto.details }}</p>
+
+        </div>
+    </div>
+
+</div>
